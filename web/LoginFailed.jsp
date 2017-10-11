@@ -1,15 +1,12 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Slit</title>
 </head>
 <body>
-Velkommen til Slit!
-
-Hva ønsker du å gjøre?
-
+Passordet eller brukernavnet er feil! vennligst prøv igjen.
 <form action="/Slit/Login.jsp">
-    <input type="submit" value="Levere modul" />
+    <input type="submit" value="Gå tilbake" />
+</form>
 </body>
 </html>

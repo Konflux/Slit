@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Marius
-  Date: 11.10.2017
-  Time: 14:55
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -21,7 +15,7 @@
     Passord: <input name="passWord" type="password"><br>
     Fornavn: <input name="firstName" type="text"><br>
     Etternavn: <input name="lastName" type="text"><br>
-    <input type="submit" value="Logg inn">
+    <input type="submit" value="Lagre">
 </form>
 </body>
 </html>

@@ -9,6 +9,7 @@ package userManagement;
         import javax.servlet.http.HttpServletResponse;
         import java.io.IOException;
         import java.io.PrintWriter;
+        import java.util.concurrent.TimeUnit;
 
 /**
  * @author Marius
@@ -21,6 +22,7 @@ public class NewStudentServlet extends HttpServlet {
 
     private void newStudent (HttpServletRequest request, HttpServletResponse response) throws IOException {
 
+        request.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
         String email = request.getParameter("email");
         String password = request.getParameter("passWord");
