@@ -30,11 +30,16 @@ public class NewStudentServlet extends HttpServlet {
         String lastname = request.getParameter("lastName");
 
         Student s = new Student(email.toLowerCase(), password, firstname.toLowerCase(), lastname.toLowerCase());
-        manager.saveUser(s);
+        if(manager.saveUser(s) == true){
+            out.print("Din bruker har blitt opprettet!  ");
+            out.print("Du vil nå bli videresendt til innloggingen   ");
+            response.sendRedirect("/Slit/Login.jsp");
+        } else if (manager.saveUser(s) == false){
+            out.print("Din bruker kunne ikke bli opprettet, vennligst prøv igjen ");
+        }
 
-        out.print("Din bruker har blitt opprettet!  ");
-        out.print("Du vil nå bli videresendt til innloggingen   ");
-        response.sendRedirect("/Slit/Login.jsp");
+
+
     }
 
     @Override

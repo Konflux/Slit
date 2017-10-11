@@ -7,5 +7,6 @@ import javax.ejb.Local;
 @Local
 public interface UserManagerLocal {
     User getUser(String id);
-    void saveUser(User u);
+    boolean saveUser(User u);
+    boolean updateUser(User u);
 }

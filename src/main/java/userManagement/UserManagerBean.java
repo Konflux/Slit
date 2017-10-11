@@ -21,7 +21,23 @@ public class UserManagerBean implements UserManagerLocal {
     }
 
     @Override
-    public void saveUser(User u){
-        em.persist(u);
+    public boolean saveUser(User u){
+        User existing = getUser(u.getEmail().toLowerCase());
+        if  (existing == null){
+            em.persist(u);
+        } else{
+            return false;
+        }
+        return true;
     }
-}
+
+    public boolean updateUser(User u){
+        User existing = getUser(u.getEmail().toLowerCase());
+        if  (existing == null){
+            em.merge(u);
+        } else{
+            return false;
+        }
+        return true;
+        }
+    }
