@@ -9,7 +9,6 @@ package userManagement;
         import javax.servlet.http.HttpServletResponse;
         import java.io.IOException;
         import java.io.PrintWriter;
-        import java.util.concurrent.TimeUnit;
 
 /**
  * @author Marius
@@ -37,8 +36,6 @@ public class NewStudentServlet extends HttpServlet {
         } else if (manager.saveUser(s) == false){
             out.print("Din bruker kunne ikke bli opprettet, vennligst prøv igjen ");
         }
-
-
 
     }
 
